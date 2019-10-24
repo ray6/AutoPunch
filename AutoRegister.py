@@ -11,7 +11,7 @@ class AutoRegister():
     def __init__(self, method="signin"):
         self.vars = {}
         self.driver = webdriver.Firefox()
-        self.url = "url"
+        self.url = "https://portal.ncu.edu.tw/"
         self.username = "username"
         self.passwd = "passwd"
         self.LogInPortal()
