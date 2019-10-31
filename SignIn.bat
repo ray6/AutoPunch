@@ -1,5 +1,5 @@
-cd C:\Users\ray\PycharmProjects\playground
-call C:\Users\ray\PycharmProjects\playground\venv\Scripts\activate.bat
-call python C:\Users\ray\PycharmProjects\playground\AutoRegister\SignIn.py
+cd \path\to\your\directory
+call \path\to\your\virtualenv\activate\batch\file
+call python \path\to\your\signin\python\file
 REM pause
 

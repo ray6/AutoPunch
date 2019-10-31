@@ -11,6 +11,7 @@ pip 19.0.3
     pip install -r requirement.txt
     ```
 2. 在`AutoRegister.py` 把 `username` 跟 `passwd` 改成自己的帳密。
+3. 把對應路徑填到`SignIn.bat`和`SighOut.bat`裡
 ## 設定排程工作
 到電腦的 控制台 > 系統及安全性 > 系統工作管理工具 > 工作排程器
 點選建立工作
