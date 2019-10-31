@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="2edd49a4-62a2-42fc-a8c8-45676c755698" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AutoRegister.py" beforeDir="false" afterPath="$PROJECT_DIR$/AutoRegister.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignIn.bat" beforeDir="false" afterPath="$PROJECT_DIR$/SignIn.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignOut.bat" beforeDir="false" afterPath="$PROJECT_DIR$/SignOut.bat" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,7 +51,9 @@
       <option name="presentableId" value="Default" />
       <updated>1571661349765</updated>
       <workItem from="1571661363317" duration="1400000" />
-      <workItem from="1571925256758" duration="2935000" />
+      <workItem from="1571925256758" duration="3177000" />
+      <workItem from="1571984010871" duration="606000" />
+      <workItem from="1572513309351" duration="356000" />
     </task>
     <servers />
   </component>
@@ -62,7 +65,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
