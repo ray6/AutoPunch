@@ -5,9 +5,9 @@ python 3.7.4
 pip 19.0.3
 
 ## 下載firefox webdriver
-https://github.com/mozilla/geckodriver/releases
-下載完把webdriver放在python資料夾裡
-電腦裡要有firefox瀏覽器，沒有的記得裝
+('https://github.com/mozilla/geckodriver/releases')
+下載完把webdriver跟py檔放一起
+電腦裡要有firefox瀏覽器，沒有的記得安裝
 ## 設定
 1. 先安裝套件
     ```=shell script
