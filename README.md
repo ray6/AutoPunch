@@ -3,7 +3,9 @@ AutoPunch
 ## 系統環境
 python 3.7.4
 pip 19.0.3
-
+##下載firefox webdriver
+https://github.com/mozilla/geckodriver/releases
+電腦裡要有firefox瀏覽器，沒有的記得裝
 ## 設定
 1. 先安裝套件
     ```=shell script
