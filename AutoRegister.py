@@ -73,5 +73,4 @@ class AutoRegister():
         WebDriverWait(self.driver, 5).until(
             EC.presence_of_element_located((By.ID, "AttendWork"))).send_keys("協助系辦工作")
         self.driver.find_element(By.ID, "signout").click()
-        self.close_windows()
         self.teardown_method()
