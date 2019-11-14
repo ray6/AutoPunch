@@ -4,7 +4,7 @@ AutoPunch
 python 3.7.4
 pip 19.0.3
 
-##下載firefox webdriver
+## 下載firefox webdriver
 https://github.com/mozilla/geckodriver/releases
 下載完把webdriver放在python資料夾裡
 電腦裡要有firefox瀏覽器，沒有的記得裝
