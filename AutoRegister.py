@@ -52,7 +52,7 @@ class AutoRegister():
         hover2.perform()
         del elem, elem2, hover, hover2
         for i in range(2, 6):
-            path_check = "//*[@id='table1']/tbody/tr[" + str(i) + "]/td[contains(text(), '工讀：1081資工系辦工讀生')]"
+            path_check = "//*[@id='table1']/tbody/tr[" + str(i) + "]/td[contains(text(), '工讀：1082資工系辦工讀生')]"
             # css_select = "tr:nth-child("+str(i)+") .btn:nth-child(1)"
             path_select = "//*[@id='table1']/tbody/tr[" + str(i) + "]/td[6]/a[contains(text(), '新增簽到')]"
             try:
