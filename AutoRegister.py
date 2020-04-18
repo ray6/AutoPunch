@@ -11,9 +11,9 @@ class AutoRegister():
     def __init__(self, method="signin"):
         self.vars = {}
         self.driver = webdriver.Firefox()
-        self.url = "https://portal.ncu.edu.tw/"
-        self.username = "username"
-        self.passwd = "passwd"
+        self.url = "https://portal.ncu.edu.tw/login"
+        self.username = "user"
+        self.passwd = "password"
         self.LogInPortal()
         self.goRegisterPage()
         if method == "signin":
@@ -34,23 +34,26 @@ class AutoRegister():
     def LogInPortal(self):
         self.driver.get(self.url)
         self.driver.set_window_size(1206, 696)
-        self.driver.find_element(By.ID, "userid_input").send_keys(self.username)
-        self.driver.find_element(By.NAME, "j_password").send_keys(self.passwd)
+        self.driver.find_element(By.ID, "inputAccount").send_keys(self.username)
+        self.driver.find_element(By.ID, "inputPassword").send_keys(self.passwd)
         self.driver.find_element(By.CSS_SELECTOR, ".btn").click()
 
     def goRegisterPage(self):
         self.vars["window_handles"] = self.driver.window_handles
         WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.XPATH, "//a[contains(text(),'人事系統 / Human System')]"))).click()
+            EC.presence_of_element_located((By.XPATH, "//a[contains(text(),'學生服務')]"))).click()
+        WebDriverWait(self.driver, 1).until(
+            EC.presence_of_element_located((By.XPATH, "//a[contains(text(),'生活助學服務')]"))).click()
+        WebDriverWait(self.driver, 1).until(
+            EC.presence_of_element_located((By.XPATH, "//a[contains(text(),'人事系統')]"))).click()
         self.vars["win271"] = self.wait_for_window(2000)
         self.driver.switch_to.window(self.vars["win271"])
-        elem = self.driver.find_element_by_xpath("//nav/ul/li[1]")
+        self.driver.find_element(By.CSS_SELECTOR, ".btn").click()
+        elem = self.driver.find_element_by_xpath("//html/body/header/nav/ul/li[1]")
         hover = ActionChains(self.driver).move_to_element(elem)
         hover.perform()
-        elem2 = self.driver.find_element_by_xpath("//nav/ul/li[1]/ul/li[2]/a")
-        hover2 = ActionChains(self.driver).move_to_element(elem2).click(elem2)
-        hover2.perform()
-        del elem, elem2, hover, hover2
+        self.driver.find_element(By.XPATH, "/html/body/header/nav/ul/li[1]/ul/li[2]").click()
+        del elem, hover
         for i in range(2, 6):
             path_check = "//*[@id='table1']/tbody/tr[" + str(i) + "]/td[contains(text(), '工讀：1082資工系辦工讀生')]"
             # css_select = "tr:nth-child("+str(i)+") .btn:nth-child(1)"
@@ -71,6 +74,6 @@ class AutoRegister():
 
     def autoSignOut(self):
         WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located((By.ID, "AttendWork"))).send_keys("協助系辦工作")
+            EC.presence_of_element_located((By.ID, "AttendWork"))).send_keys("協助系辦相關事項")
         self.driver.find_element(By.ID, "signout").click()
         self.teardown_method()
