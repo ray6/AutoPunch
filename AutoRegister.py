@@ -48,7 +48,10 @@ class AutoRegister():
             EC.presence_of_element_located((By.XPATH, "//a[contains(text(),'人事系統')]"))).click()
         self.vars["win271"] = self.wait_for_window(2000)
         self.driver.switch_to.window(self.vars["win271"])
-        self.driver.find_element(By.CSS_SELECTOR, ".btn").click()
+        try:
+            self.driver.find_element(By.CSS_SELECTOR, ".btn").click()
+        except:
+            pass
         elem = self.driver.find_element_by_xpath("//html/body/header/nav/ul/li[1]")
         hover = ActionChains(self.driver).move_to_element(elem)
         hover.perform()
